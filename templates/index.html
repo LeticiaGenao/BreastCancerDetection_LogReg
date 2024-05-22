@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+</head>
+<body>
+    <h1>Breast Cancer Prediction Form</h1>
+    <form method="post" action="/predict">
+        <label for="clump_thickness">Clump Thickness:</label><br>
+        <input type="text" id="clump_thickness" name="clump_thickness"><br>
+
+        <label for="uniformity_of_cell_size">Uniformity of Cell Size:</label><br>
+        <input type="text" id="uniformity_of_cell_size" name="uniformity_of_cell_size"><br>
+
+        <label for="uniformity_of_cell_shape">Uniformity of Cell Shape:</label><br>
+        <input type="text" id="uniformity_of_cell_shape" name="uniformity_of_cell_shape"><br>
+
+        <label for="marginal_adhesion">Marginal Adhesion:</label><br>
+        <input type="text" id="marginal_adhesion" name="marginal_adhesion"><br>
+
+        <label for="single_epithelial_cell_size">Single Epithelial Cell Size:</label><br>
+        <input type="text" id="single_epithelial_cell_size" name="single_epithelial_cell_size"><br>
+
+        <label for="bare_nuclei">Bare Nuclei:</label><br>
+        <input type="text" id="bare_nuclei" name="bare_nuclei"><br>
+
+        <label for="bland_chromatin">Bland Chromatin:</label><br>
+        <input type="text" id="bland_chromatin" name="bland_chromatin"><br>
+
+        <label for="normal_nucleoli">Normal Nucleoli:</label><br>
+        <input type="text" id="normal_nucleoli" name="normal_nucleoli"><br>
+
+        <label for="mitoses">Mitoses:</label><br>
+        <input type="text" id="mitoses" name="mitoses"><br>
+
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
